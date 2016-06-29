@@ -5,7 +5,6 @@ var readFile = function(callback){
   fs.readFile('dictionary/words.txt', function(err, data){
     if(err) throw err;
     callback(data.toString());
-    // wordArray.push(result);
   });
 };
 
