@@ -1,7 +1,5 @@
 var fs = require('fs');
 
-
-
 const handler = function(request, response){
   var url = request.url;
   if(url === '/'){
