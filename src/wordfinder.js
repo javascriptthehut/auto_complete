@@ -1,14 +1,6 @@
 var fs = require('fs');
 var asyncWaterfall = require('async-waterfall');
 
-var readFile = function(callback){
-  fs.readFile('dictionary/words.txt', function(err, data){
-    if(err) throw err;
-    callback(data.toString());
-    // wordArray.push(result);
-  });
-};
-
 function makeArray(string){
   return string.split('\n');
 };
@@ -28,9 +20,15 @@ function stringifyArray(input){
   return input.join(',');
 }
 
+function renderData(input, word){
+  var array = makeArray(input);
+  var matches = findMatchesArray(array, word);
+  return stringifyArray(matches);
+}
+
 module.exports = {
-  readFileFunction: readFile,
   makeArrayFunction: makeArray,
   findMatchesArrayFnc: findMatchesArray,
-  stringifyArrayFnc: stringifyArray
+  stringifyArrayFnc: stringifyArray,
+  renderDataFnc: renderData
 };

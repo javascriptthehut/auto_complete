@@ -4,6 +4,7 @@ var shot = require('shot');
 var handler = require('../src/handler.js');
 var wordFinder = require('../src/wordFinder.js');
 
+//this test is from handler(make array and then load html)
 tape('test a get request to the / endpoint', function(t){
   shot.inject(handler, {method: 'get', url: '/'}, function(res){
     t.equal(res.statusCode, 200, '/ has status code of 200');
@@ -13,20 +14,22 @@ tape('test a get request to the / endpoint', function(t){
   });
 });
 
-// tape('testing for 404 an ened point which won\'t be handling', function(t){
-//   shot.inject(handler, {method: 'get', url: '/something'}, function(res){
-//     t.equal(res.statusCode, 404, '/something has status code of 404');
-//     t.end();
-//   });
-// });
-
-tape('to see if server reads from .txt file in dictionary folder', function(t){
-  wordFinder.readFileFunction(function callback(data){
-    t.ok(data.includes('heterochromosome'));
+tape('testing for 404 an ened point which won\'t be handling', function(t){
+  shot.inject(handler, {method: 'get', url: '/9027597835'}, function(res){
+    t.equal(res.statusCode, 404, '/something has status code of 404');
     t.end();
   });
 });
 
+// //this test is from handler
+// tape('to see if server reads from .txt file in dictionary folder', function(t){
+//   wordFinder.readFileFunction(function callback(data){
+//     t.ok(data.includes('heterochromosome'));
+//     t.end();
+//   });
+// });
+
+//this test is from wordfinder (implements the data manipulation)
 tape('turn data into array', function(t){
   t.deepEqual(wordFinder.makeArrayFunction('bee\nbumble\nhumble'), ['bee', 'bumble', 'humble']);
   t.end();
@@ -44,4 +47,12 @@ tape('function stringefy turnes array into string with ","', function(t){
   var expected = 'bca,bce';
   t.deepEqual(wordFinder.stringifyArrayFnc(actual), expected);
   t.end();
+});
+
+tape('test a get request to the /find/ endpoint', function(t){
+  shot.inject(handler, {method: 'get', url: '/find/overmonopolizing'}, function(res){
+    t.equal(res.statusCode, 200, '/ has status code of 200');
+    t.ok(res.payload.includes('overmonopolizing'), 'found the word overmonopolizing');
+    t.end();
+  });
 });
