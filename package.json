@@ -1,0 +1,29 @@
+{
+  "name": "auto_complete",
+  "version": "1.0.0",
+  "description": "auto_complete function",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "nodemon test/server-test.js",
+    "start": "nodemon src/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/javascriptthehut/auto_complete.git"
+  },
+  "author": "anneka, rich, sam and noga",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/javascriptthehut/auto_complete/issues"
+  },
+  "homepage": "https://github.com/javascriptthehut/auto_complete#readme",
+  "devDependencies": {
+    "env2": "^2.1.0",
+    "nodemon": "^1.9.2",
+    "shot": "^3.1.0",
+    "tape": "^4.6.0"
+  }
+}
