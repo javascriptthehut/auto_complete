@@ -31,3 +31,17 @@ tape('turn data into array', function(t){
   t.deepEqual(wordFinder.makeArrayFunction('bee\nbumble\nhumble'), ['bee', 'bumble', 'humble']);
   t.end();
 });
+
+tape('function find matchesArray returns new array with matches', function(t){
+  var actual = ['abc', 'bca', 'cde', 'bce'];
+  var expected = ['bca', 'bce'];
+  t.deepEqual(wordFinder.findMatchesArrayFnc(actual, 'bc'), expected);
+  t.end();
+});
+
+tape('function stringefy turnes array into string with ","', function(t){
+  var actual = ['bca', 'bce'];
+  var expected = 'bca,bce';
+  t.deepEqual(wordFinder.stringifyArrayFnc(actual), expected);
+  t.end();
+});

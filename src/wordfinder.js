@@ -1,29 +1,36 @@
 var fs = require('fs');
-
-let wordArray = [];
+var asyncWaterfall = require('async-waterfall');
 
 var readFile = function(callback){
   fs.readFile('dictionary/words.txt', function(err, data){
     if(err) throw err;
-    var result = callback(data.toString());
-    return result;
+    callback(data.toString());
     // wordArray.push(result);
   });
 };
 
 function makeArray(string){
   return string.split('\n');
-}
+};
 
-// function findMatchesArray(){
-//   //will reaturn a new array
-// }
+function findMatchesArray(array, word){
+  var found = [];
+  //will reaturn a new array with selected words
+  for (var i=0; i < array.length; i++){
+    if (array[i].indexOf(word) === 0){
+      found.push(array[i]);
+    }
+  }
+  return found;
+}
 //
-// function stringifyArray(){
-//
-// }
+function stringifyArray(input){
+  return input.join(',');
+}
 
 module.exports = {
   readFileFunction: readFile,
-  makeArrayFunction: makeArray
+  makeArrayFunction: makeArray,
+  findMatchesArrayFnc: findMatchesArray,
+  stringifyArrayFnc: stringifyArray
 };
