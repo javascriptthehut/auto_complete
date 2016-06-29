@@ -14,4 +14,4 @@ This will request an array of words that match the first three typed letters, th
 ## Stretch Goals
 
 The words will be clickable and will request from a dictionary API the definition of the word to display the return.
-detting up on Heroku
+setting up database on Heroku
