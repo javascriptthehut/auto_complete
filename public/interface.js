@@ -46,13 +46,13 @@ if(dropdown.firstChild){
         event.preventDefault()
         if (selected.nextSibling){
           selected.nextSibling.className = 'highlighted';
-          selected.className = '';
+          selected.className = 'option';
         }
       } else if (event.keyCode === 38) {
         event.preventDefault()
         if (selected.previousSibling){
           selected.previousSibling.className = 'highlighted';
-          selected.className = '';
+          selected.className = 'option';
         }
       } else if (event.keyCode === 13){
         event.preventDefault()
