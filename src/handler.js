@@ -1,35 +1,25 @@
+
+//node modules
 var fs = require('fs');
+
+//modules from other files
 var renderData = require('./wordfinder.js');
 var loadfile = require('./loadfile');
+var urlPaths = require('./urlPaths');
 
-function loadIndex(request, response) {
-  fs.readFile(__dirname + '/../public/index.html', function(err, data){
-    if(err) throw err;
-    response.writeHead(200, {'Content-Type': 'text/html'});
-    response.end(data);
-  });
-}
-
+//handler function which executes code according to a specific url path
+//connected to urlPaths.js where all the paths and their respective code is.
 const handler = function(request, response){
-  var url = request.url;
+  var url = request.url;//
   if(url === '/'){
-    loadIndex(request, response);
+    urlPaths.urlPathToIndex(request, response);
   } else if (url.includes('/find')){
-    var searchWord = url.substring(6);
-    loadfile.readFileAsString('dictionary/words.txt', function(fileAsString){
-      var output = renderData.renderDataFnc(fileAsString, searchWord);
-      console.log(output, searchWord, url);
-      response.writeHead(200, {'Content-Type': 'text/plain'});
-      response.end(output);
-    });
+    urlPaths.urlPathToFind(request, response);
   } else {
     response.writeHead(404);
     response.end('WRONG!');
   }
-
 };
 
+//export functions
 module.exports = handler;
-
-
-///

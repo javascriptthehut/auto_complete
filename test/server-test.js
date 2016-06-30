@@ -1,11 +1,12 @@
+
+//node modules
 var tape = require('tape');
 var shot = require('shot');
 
+//modules from other files
 var handler = require('../src/handler.js');
 var wordFinder = require('../src/wordFinder.js');
-
-
-
+var urlPaths = require('../src/urlPaths.js');
 
 //this test is from handler(make array and then load html)
 tape('test a get request to the / endpoint', function(t){
