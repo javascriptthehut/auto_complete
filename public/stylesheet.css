@@ -1,0 +1,55 @@
+body {
+  margin: 0;
+  height: 100vh;
+  width: 100vw;
+  background-image: url('./background.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-family: helvetica;
+}
+
+.option{
+  background-color: rgba(255, 255, 255, 0.5);
+  color: black;
+  border-radius: 5px;
+  width: 20vw;
+  margin: 0;
+}
+
+.highlighted{
+ background: rgba(0, 0, 0, 0.5);
+ color: white;
+  border-radius: 5px;
+  width: 20vw;
+  margin: 0;
+}
+
+#input {
+  margin-top: 12vh;
+  margin-left: 10vw;
+  width: 20vw;
+}
+
+.dropdown {
+  width: 40vw;
+  float: left;
+  margin-left: 10vw;
+}
+
+#definition {
+  margin-top: 12vh;
+  background-color: rgba(255, 255, 255, 0.5);
+  width: 40vw;
+  margin-right: 10vw;
+  border-radius: 5px;
+  height: 50vh;
+  float: right;
+}
+
+#logo {
+  position: absolute;
+  bottom: 10vh;
+  width: 90vw;
+  left: 5vw;
+  height: auto;
+}
