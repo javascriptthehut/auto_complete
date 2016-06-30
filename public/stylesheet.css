@@ -48,6 +48,6 @@ body {
   position: absolute;
   bottom: 10vh;
   width: 90vw;
-  margin-left: 5vw;
+  left: 5vw;
   height: auto;
 }
