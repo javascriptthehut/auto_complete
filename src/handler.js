@@ -1,10 +1,5 @@
 
-//node modules
-var fs = require('fs');
-
 //modules from other files
-var renderData = require('./wordfinder.js');
-var loadfile = require('./loadfile');
 var urlPaths = require('./urlPaths');
 
 //handler function which executes code according to a specific url path

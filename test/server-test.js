@@ -6,7 +6,6 @@ var shot = require('shot');
 //modules from other files
 var handler = require('../src/handler.js');
 var wordFinder = require('../src/wordFinder.js');
-var urlPaths = require('../src/urlPaths.js');
 
 //this test is from handler(make array and then load html)
 tape('test a get request to the / endpoint', function(t){
@@ -24,14 +23,6 @@ tape('testing for 404 an ened point which won\'t be handling', function(t){
     t.end();
   });
 });
-
-// //this test is from handler
-// tape('to see if server reads from .txt file in dictionary folder', function(t){
-//   wordFinder.readFileFunction(function callback(data){
-//     t.ok(data.includes('heterochromosome'));
-//     t.end();
-//   });
-// });
 
 //this test is from wordfinder (implements the data manipulation)
 tape('turn data into array', function(t){

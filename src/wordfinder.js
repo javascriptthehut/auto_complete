@@ -1,9 +1,6 @@
 //WORDFINDER WILL MANIPULATE THE DATA(dicionary) FROM SERVER MEMORY, TO
 //USE IN handler.js
 
-//node modules
-var fs = require('fs');
-
 //take data and split on each new line to make array of words
 function makeArray(string){
   return string.split('\n');

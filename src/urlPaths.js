@@ -3,7 +3,6 @@
 var fs = require('fs');
 
 //modules from other files
-var handler = require('./handler.js');
 var renderData = require('./wordfinder.js');
 var loadfile = require('./loadfile');
 
