@@ -34,6 +34,7 @@ document.getElementById('input').addEventListener("input", function() {
       xhr();
     } else {
       removeChildren();
+      getDef(document.getElementById('input').value)
     }
 });
 
@@ -58,7 +59,7 @@ if(dropdown.firstChild){
         event.preventDefault()
         console.log(selected.innerHTML)
         document.getElementById('input').value = selected.innerHTML
-        document.getElementById('definition').innerHTML = "success"
+        getDef(document.getElementById('input').value)
         xhr();
       }
   } else if (event.keyCode === 40 || event.keyCode == 38) {

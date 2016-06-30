@@ -13,6 +13,7 @@ body {
   color: black;
   border-radius: 5px;
   width: 20vw;
+  margin: 0;
 }
 
 .highlighted{
@@ -20,6 +21,7 @@ body {
  color: white;
   border-radius: 5px;
   width: 20vw;
+  margin: 0;
 }
 
 #input {
