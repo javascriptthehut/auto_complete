@@ -2,7 +2,6 @@ function handleResult(input) {
     var array = input.split(',');
     var dropdown = document.getElementsByClassName('dropdown')[0]
     removeChildren();
-    if (input.length > 1){
       array.forEach(function(text){
         var p = document.createElement('p')
         p.className = 'option'
@@ -10,7 +9,6 @@ function handleResult(input) {
         p.appendChild(text)
         dropdown.appendChild(p)
       })
-    }
 }
 
 function xhr () {
