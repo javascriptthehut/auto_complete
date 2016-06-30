@@ -15,6 +15,18 @@ function loadIndex(request, response) {
   });
 }
 
+function publicUrlPath(request, response){
+    const url = request.url;
+    const ext = url.split('.')[2];
+    fs.readFile(__dirname + '/..' + url, (err, data) => {
+        if(err) throw err;
+        response.writeHead(200, {'Content-Type' : 'text/' + ext});
+        response.end(data);
+    });
+}
+
+
+
 //load data according to url with certain letters (i.e /find/abc) and manipulate
 //according to worldfinder.js
 function findUrlPath(request, response){
@@ -31,5 +43,6 @@ function findUrlPath(request, response){
 //export functions
 module.exports = {
   urlPathToIndex: loadIndex,
-  urlPathToFind: findUrlPath
+  urlPathToFind: findUrlPath,
+  urlPathToPublic: publicUrlPath
 };

@@ -15,6 +15,9 @@ function findMatchesArray(array, word){
     if (array[i].indexOf(word) === 0){
       found.push(array[i]);
     }
+    if (found.length > 19){
+      return found;
+    }
   }
   return found;
 }
