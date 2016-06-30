@@ -8,19 +8,27 @@ body {
 }
 
 .option{
-  background-color: white;
-  background.opacity: 50%;
+  background-color: rgba(255, 255, 255, 0.5);
   color: black;
+  border-radius: 5px;
+  width: 20vw;
 }
 
 .highlighted{
-  background-color: blue;
-  color: white;
+ background: rgba(0, 0, 0, 0.5);
+ color: white;
+  border-radius: 5px;
+  width: 20vw;
+}
+
+#input {
+  margin-left: 10vw;
 }
 
 .dropdown {
-  width: 50vw;
+  width: 40vw;
   float: left;
+  margin-left: 10vw;
 }
 
 #definition {

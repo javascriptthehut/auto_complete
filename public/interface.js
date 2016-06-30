@@ -30,7 +30,11 @@ function removeChildren () {
 }
 
 document.getElementById('input').addEventListener("input", function() {
-    xhr();
+    if (document.getElementById('input').value.length !== 0) {
+      xhr();
+    } else {
+      removeChildren();
+    }
 });
 
 document.querySelector('body').addEventListener("keydown", function(event) {
