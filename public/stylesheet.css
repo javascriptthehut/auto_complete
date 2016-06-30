@@ -1,0 +1,26 @@
+body {
+  margin: 0;
+  background-image: url('./background.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.option{
+  background-color: white;
+  color: black;
+}
+
+.highlighted{
+  background-color: blue;
+  color: white;
+}
+
+.dropdown {
+  width: 50vw;
+  float: left;
+}
+
+#definition {
+  width: 50vw;
+  float: right;
+}
