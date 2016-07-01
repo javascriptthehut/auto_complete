@@ -12,13 +12,20 @@ body {
   font-size: 16px;
   background-image: url(triangle.gif);
   background-position: top;
+
 }
 
 header {
+display: inline-block;
 width: 100%;
 margin-top: 10vw;
 margin-left: 10vw;
+position: relative;
 }
+
+/*header img{
+display: inline-block;
+}*/
 
 
 /*.header-site{
@@ -60,7 +67,7 @@ margin-left: 10vw;
   width: 20vw;
   float: left;
   margin-left: 10vw;
-  margin-top: 27vh;
+  margin-top: 29vh;
 }
 
 #definition {
@@ -71,6 +78,7 @@ margin-left: 10vw;
   margin-right: 10vw;
   border-radius: 5px;
   height: 40vh;
+  padding: 10px;
   float: right;
 }
 
@@ -88,6 +96,12 @@ margin-left: 10vw;
 	width: calc(100% - 2em);
 	vertical-align: top;
   color: #0c5127;
+}
+
+input[type="text"] {
+font-size: 18px;
+font-family: 'Raleway', sans-serif;
+color: #0c5127;
 }
 
 .input__field {
@@ -145,7 +159,7 @@ margin-left: 10vw;
 
 .input__label--dictionary::after {
 	margin-top: 2px;
-	border-bottom: 4px solid red;
+	border-bottom: 4px solid;
 	-webkit-transform: translate3d(-100%, 0, 0);
 	transform: translate3d(-100%, 0, 0);
 	-webkit-transition: -webkit-transform 0.3s;
