@@ -1,5 +1,4 @@
-![travis icon](https://travis-ci.org/javascriptthehut/auto_complete.svg?branch=travis)
-
+[![Build Status](https://travis-ci.org/javascriptthehut/auto_complete.svg?branch=master)](https://travis-ci.org/javascriptthehut/auto_complete)
 
 # auto_complete
 Build an applicaiton back-end to front-end with a simple but great design, all tested and all in in vanilla js!
