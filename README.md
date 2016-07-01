@@ -1,3 +1,5 @@
+https://travis-ci.org/javascriptthehut/auto_complete.svg?branch=travis
+
 # auto_complete
 Build an applicaiton back-end to front-end with a simple but great design, all tested and all in in vanilla js!
 
