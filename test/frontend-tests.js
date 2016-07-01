@@ -1,28 +1,27 @@
 //jasmine
 
 (function () {
-	'use strict';
+	                    'use strict';
 
-	describe('urlBuilder.js', function () {
+	                    describe('urlBuilder.js', function () {
 
-		it('does one thing',function(){
+		                    it('does one thing',function(){
 
 		});
 
-		it('does another thing',function(){
+		                    it('does another thing',function(){
 
 		});
 
 	});
-	describe('interface.js', function () {
+	                    describe('interface.js', function () {
 
-		it('does one thing',function(){
-
-		});
-
-		it('does another thing',function(){
+		                    it('does one thing',function(){
 
 		});
-	})
+
+		                    it('does another thing',function(){
+
+		});
+	});
 })();
-
