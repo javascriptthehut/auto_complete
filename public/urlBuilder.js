@@ -3,11 +3,11 @@ function getDef(word){
 
   /////1.BUILDING MY URL ACCORDING TO THE API//////
   var query = {
-      from: 'eng',
-      dest: 'es',
-      format: 'json',
-      phrase: word,
-      pretty: 'true'
+    from: 'eng',
+    dest: 'es',
+    format: 'json',
+    phrase: word,
+    pretty: 'true'
   };
 
   var baseUrl = 'https://glosbe.com';
@@ -38,7 +38,7 @@ function getDef(word){
     .filter(function(el) {return el.language === 'es';})
     .map(function (el) {return el.text;});
     console.log(findSpanishMeaning[0]);
-    document.getElementById('definition').innerHTML = decodeURI(findSpanishMeaning[0])
+    document.getElementById('definition').innerHTML = decodeURI(findSpanishMeaning[0]);
 
   //English meanings
     var findEnglishMeaning = response.tuc
