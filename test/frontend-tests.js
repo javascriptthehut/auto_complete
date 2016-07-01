@@ -1,9 +1,9 @@
 //jasmine
 
 (function () {
-	'use strict';
+	                    'use strict';
 
-	describe('urlBuilder.js', function () {
+	                    describe('urlBuilder.js', function () {
 
 		beforeEach(function() {
 			jasmine.Ajax.install();
@@ -34,4 +34,3 @@
 		})
 	})
 })();
-
