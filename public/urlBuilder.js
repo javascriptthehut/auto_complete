@@ -27,7 +27,6 @@ function getDef(word){
 
         //spanish translation of the word
     var spanishWord = response.tuc[0].phrase.text;
-    console.log(spanishWord, 'spanish');
     document.getElementById('word').innerHTML = decodeURI(spanishWord);
 
     //iterate over meanings array (if meaning[i].language === "es") then return meanings[i].text!
@@ -38,7 +37,6 @@ function getDef(word){
     .filter(function(el) {return el;}) // filter undefined objects
     .filter(function(el) {return el.language === 'es';})
     .map(function (el) {return el.text;});
-    console.log(findSpanishMeaning[0]);
     document.getElementById('definition').innerHTML = decodeURI(findSpanishMeaning[0]);
 
   //English meanings
@@ -48,7 +46,6 @@ function getDef(word){
     .filter(function(el) {return el;}) // filter undefined objects
     .filter(function(el) {return el.language === 'en';})
     .map(function (el) {return el.text;});
-    console.log(findEnglishMeaning[0] + ', \n' + findEnglishMeaning[1]);
     document.getElementById('englishDef').innerHTML = decodeURI(findEnglishMeaning[0]);
 
   });
