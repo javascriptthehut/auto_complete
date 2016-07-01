@@ -1,4 +1,3 @@
-/*colors: #0c5127; #f4dfda; font family:font-family: 'Raleway', sans-serif;*/
 
 body {
   margin: 0;
@@ -10,7 +9,7 @@ body {
   background-color: #f4dfda;
   font-weight: bold;
   font-size: 16px;
-  background-image: url(triangle.gif);
+  background-image: url(twoTriangles.gif);
   background-position: top;
 
 }
@@ -57,7 +56,7 @@ display: inline-block;
 
 
 #input {
-  margin-top: 20vh;
+  margin-top: 24vh;
   margin-left: 10vw;
   width: 20vw;
 }
@@ -67,23 +66,18 @@ display: inline-block;
   width: 20vw;
   float: left;
   margin-left: 10vw;
-  margin-top: 29vh;
+  margin-top: 33vh;
 }
 
-#definition {
+.resultContainer {
   float: right;
-  margin-top: 12vh;
+  margin-top: 10vh;
   background-color: rgba(255, 255, 255, 0.5);
   width: 30vw;
   margin-right: 10vw;
   border-radius: 5px;
   height: 40vh;
   padding: 10px;
-  float: right;
-}
-
-#definition p {
-  font-size: 30px;
 }
 
 .input {
