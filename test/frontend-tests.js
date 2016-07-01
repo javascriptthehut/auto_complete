@@ -5,23 +5,32 @@
 
 	                    describe('urlBuilder.js', function () {
 
-		                    it('does one thing',function(){
-
+		beforeEach(function() {
+			jasmine.Ajax.install();
 		});
 
-		                    it('does another thing',function(){
-
+		afterEach(function() {
+			jasmine.Ajax.uninstall();
 		});
 
-	});
-	                    describe('interface.js', function () {
-
-		                    it('does one thing',function(){
-
+		it('builds the url correctly',function(){
+			expect(buildURL('cat')).toBe('https://glosbe.com/gapi/translate?from=eng&dest=es&format=json&phrase=cat&pretty=true')
 		});
 
-		                    it('does another thing',function(){
+		it('sends xhr request',function(){
+			spyOn(window,'responseHandler')
+			makeCall('test/url');
 
-		});
-	});
+			expect(jasmine.Ajax.requests.mostRecent().url).toBe('test/url');
+			expect(window.responseHandler).not.toHaveBeenCalled();
+
+			jasmine.Ajax.requests.mostRecent().respondWith({
+				status: 200,
+				contentType: 'text/plain',
+				responseText: 'awesome response',
+			});
+
+			expect(window.responseHandler).toHaveBeenCalled();
+		})
+	})
 })();
