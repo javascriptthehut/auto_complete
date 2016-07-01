@@ -16,14 +16,14 @@ function loadIndex(request, response) {
 }
 
 function publicUrlPath(request, response){
-    const url = request.url;
-    const ext = url.split('.')[1];
-    console.log(`url ${url} and ext ${ext}`)
-    fs.readFile(__dirname + '/..' + url, (err, data) => {
-        if(err) throw err;
-        response.writeHead(200, {'Content-Type' : 'text/' + ext});
-        response.end(data);
-    });
+  const url = request.url;
+  const ext = url.split('.')[1];
+  console.log(`url ${url} and ext ${ext}`);
+  fs.readFile(__dirname + '/..' + url, (err, data) => {
+    if(err) throw err;
+    response.writeHead(200, {'Content-Type': 'text/' + ext});
+    response.end(data);
+  });
 }
 
 
