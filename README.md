@@ -1,5 +1,8 @@
 [![Build Status](https://travis-ci.org/javascriptthehut/auto_complete.svg?branch=master)](https://travis-ci.org/javascriptthehut/auto_complete)
 
+#ATTENTION!
+This website requires a Chrome plugin to enable CORS.
+----------------------------------------------------
 
 ## Why? [![start with why](https://img.shields.io/badge/start%20with-why%3F-brightgreen.svg?style=flat)]()
 Build an applicaiton back-end to front-end with a simple but great design, all tested and all in in vanilla js!
