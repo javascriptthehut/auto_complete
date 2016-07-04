@@ -1,7 +1,7 @@
 [![Build Status](https://travis-ci.org/javascriptthehut/auto_complete.svg?branch=master)](https://travis-ci.org/javascriptthehut/auto_complete)
 
 
-## Why? [![start with why](https://img.shields.io/badge/start%20with-why%3F-brightgreen.svg?style=flat)](http://www.ted.com/talks/simon_sinek_how_great_leaders_inspire_action)
+## Why? [![start with why](https://img.shields.io/badge/start%20with-why%3F-brightgreen.svg?style=flat)]()
 Build an applicaiton back-end to front-end with a simple but great design, all tested and all in in vanilla js!
 
 ## WHAT
