@@ -9,6 +9,7 @@ function handleResult(input) {
 		p.appendChild(text);
 		dropdown.appendChild(p);
 	});
+	addClick();
 }
 
 function xhr () {
@@ -68,3 +69,29 @@ document.querySelector('body').addEventListener('keydown', function(event) {
 		}
 	}
 });
+
+function addClick() {
+	var elements = document.getElementsByClassName('option');
+	for(var i = 0; i < elements.length; i++) {
+		elements[i].addEventListener('mouseover', function(event){
+			event.target.style.backgroundColor = 'rgba(0, 0, 0, 0.5)'
+		})
+		elements[i].addEventListener('mouseleave', function(event){
+			event.target.style.backgroundColor = 'rgba(255, 255, 255, 0.5)'
+		})
+		elements[i].addEventListener('click', function(e) {
+			removeHighlighted();
+			e.target.className = 'highlighted';
+			document.getElementById('input').value = document.getElementsByClassName('highlighted')[0].innerHTML;
+			getDef(document.getElementById('input').value);
+			xhr();
+	})
+	}
+}
+
+function removeHighlighted(){
+	var highElements = document.getElementsByClassName('highlighted');
+	for (var j = 0; j < highElements.length; j ++) {
+		highElements[j].className = 'option';
+	}
+}
