@@ -13,7 +13,7 @@ var port = 4000;
 
 ///read .txt file on startup of server and put in memory, readFileAsString function is imported from loadfile.js
 function startServer() { loadfile.readFileAsString('dictionary/words.txt', function(){ //take from loadfile.js the readFileAsString function
-  server.listen(process.env.PORT || 4000)); //once you read the file, loaded it and strigified it, open server to listening.
+  server.listen(process.env.PORT || 4000); //once you read the file, loaded it and strigified it, open server to listening.
   console.log('.txt file has loaded and Server is running on: ' + port);
 })};
 
