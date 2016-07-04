@@ -74,10 +74,12 @@ function addClick() {
 	var elements = document.getElementsByClassName('option');
 	for(var i = 0; i < elements.length; i++) {
 		elements[i].addEventListener('mouseover', function(event){
-			event.target.style.backgroundColor = 'rgba(0, 0, 0, 0.5)'
+			event.target.style.backgroundColor = 'rgba(0, 0, 0, 0.5)';
+			event.target.style.color = 'white';
 		})
 		elements[i].addEventListener('mouseleave', function(event){
 			event.target.style.backgroundColor = 'rgba(255, 255, 255, 0.5)'
+			event.target.style.color = '#0c5127';
 		})
 		elements[i].addEventListener('click', function(e) {
 			removeHighlighted();
